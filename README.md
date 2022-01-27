@@ -4,9 +4,8 @@ The `matmul.py` file contains Python code for matrix multiplication with NumPy,
 Python, and CUDA. The program generates two matrices A and B and multiplies them
 using the three approaches. For each approach the elapsed time is printed.
 
-The CUDA code is implemented with Numba, see [Numba for CUDA GPUs](https://numba.readthedocs.io/en/stable/cuda/index.html).
-
-It follows the concepts explained in the [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html).
+The CUDA code is implemented with the help of Numba, see [Numba for CUDA GPUs](https://numba.readthedocs.io/en/stable/cuda/index.html).
+It still follows the concepts explained in the [CUDA C++ Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html).
 
 ## How to run
 
