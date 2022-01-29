@@ -1,4 +1,3 @@
-import math
 import time
 import numpy as np
 from numba import cuda
@@ -53,8 +52,8 @@ print()
 print("Multiply A x B with cuda")
 C = np.zeros((N, N), np.float32)
 threads_per_block = (8, 8)
-blocks_per_grid = (math.ceil(C.shape[0]/threads_per_block[0]),
-                   math.ceil(C.shape[1]/threads_per_block[1]))
+blocks_per_grid = ((N + threads_per_block[0] - 1) // threads_per_block[0],
+                   (N + threads_per_block[1] - 1) // threads_per_block[1])
 print(f"threads_per_block={threads_per_block}, blocks_per_grid={blocks_per_grid}")
 start = time.time()
 matmul[blocks_per_grid, threads_per_block](A, B, C)
